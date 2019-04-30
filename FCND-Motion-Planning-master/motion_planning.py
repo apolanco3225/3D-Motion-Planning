@@ -190,7 +190,6 @@ class MotionPlanning(Drone):
 
 
         # TODO: prune path to minimize number of waypoints [Checked]
-        # TODO (if you're feeling ambitious): Try a different approach altogether! [ I will do :)]
         pruned_path = prune_path(path) # path prune
         waypoints = [[p[0] + north_offset, p[1] + east_offset, TARGET_ALTITUDE, 0] for p in pruned_path]
         self.waypoints = waypoints
